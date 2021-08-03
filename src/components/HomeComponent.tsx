@@ -1,12 +1,17 @@
 import React, { Component } from "react";
 import { Jumbotron, Nav, NavItem, Navbar } from "reactstrap";
 import { NavLink } from "react-router-dom";
+import fire from "../config/fire";
 import AccountModal from "./AccountDetailsModal";
 import WorkoutModal from "./LogWorkoutModal";
 import LogModal from "./LogModal";
-import Signup from "./SignupModal";
+
+// import Signup from "./SignupModal";
 
 class Home extends Component {
+  handleLogout = () => {
+    fire.auth().signOut();
+  };
 
   render() {
     return (
@@ -15,7 +20,7 @@ class Home extends Component {
           <div className="container">
             <div className="row">
               <div className="col">
-                <h1 className="header">Spartan Calisthenics</h1>
+                <h1 text="header">Spartan Calisthenics</h1>
                 <h2>A better way to train.</h2>
               </div>
             </div>
