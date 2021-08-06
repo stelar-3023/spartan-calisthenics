@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Modal, ModalBody } from "reactstrap";
 
-type AppProps = {};
+type AppProps = {}
 class AccountModal extends Component {
   constructor(props: AppProps) {
     super(props);
