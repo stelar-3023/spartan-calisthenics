@@ -1,8 +1,12 @@
 import React, { Component } from "react";
 import { Modal, ModalBody } from "reactstrap";
 
-type AppProps = {}
-class AccountModal extends Component {
+interface AppProps {
+}
+interface AppState {
+  isAccountOpen?: boolean;
+}
+class AccountModal extends Component<AppProps, AppState> {
   constructor(props: AppProps) {
     super(props);
     this.state = {
