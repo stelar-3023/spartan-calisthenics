@@ -1,17 +1,20 @@
 import React, { Component } from "react";
 import { Modal, ModalBody } from "reactstrap";
 
-interface AppProps {
+type AppProps = {
+  renderAccount: Function;
+  user: { email: string };
+};
+
+interface StateProps {
+  isAccountOpen: boolean;
 }
-interface AppState {
-  isAccountOpen?: boolean;
-}
-class AccountModal extends Component<AppProps, AppState> {
+class AccountModal extends Component<AppProps, StateProps> {
   constructor(props: AppProps) {
     super(props);
     this.state = {
       isAccountOpen: false,
-    };
+    } as StateProps;
     this.toggleAccount = this.toggleAccount.bind(this);
   }
 
