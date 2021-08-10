@@ -10,14 +10,25 @@ import {
 } from "reactstrap";
 import fire from "../config/fire";
 
-class LoginModal extends Component {
-  constructor(props) {
+type AppProps = {
+  renderLogin: Function,
+}
+
+interface StateProps {
+  isLoginOpen: boolean;
+  email: string;
+  password: string;
+
+}
+
+class LoginModal extends Component<AppProps, StateProps> {
+  constructor(props: AppProps) {
     super(props);
     this.state = {
       email: "",
       password: "",
       isLoginOpen: false,
-    };
+    } as StateProps;
     this.login = this.login.bind(this);
     this.handleChange = this.handleChange.bind(this);
     this.toggleLogin = this.toggleLogin.bind(this);

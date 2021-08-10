@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Jumbotron, Nav, NavItem, Navbar } from "reactstrap";
-// import { NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 class Login extends Component {
   render() {
@@ -20,7 +20,7 @@ class Login extends Component {
           <div className="container">
             <Nav navbar style={{ marginRight: "auto" }}>
               <NavItem>
-                {/* <LoginModal
+                <LoginModal
                   renderLogin={(toggleLogin) => (
                     <NavLink
                       onClick={toggleLogin}
@@ -31,10 +31,10 @@ class Login extends Component {
                       Login
                     </NavLink>
                   )}
-                /> */}
+                />
               </NavItem>
               <NavItem>
-                {/* <SignupModal
+                <SignupModal
                   renderSignup={(toggleSignup) => (
                     <NavLink
                       onClick={toggleSignup}
@@ -45,7 +45,7 @@ class Login extends Component {
                       Sign up
                     </NavLink>
                   )}
-                /> */}
+                />
               </NavItem>
             </Nav>
           </div>
